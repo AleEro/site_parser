@@ -9,7 +9,6 @@ def get_html(url):
 
 
 def data_of_data(html):
-    # soup = BeautifulSoup(html, 'lxml')
     names = re.findall(r'''class="no-wrap currency-name" data-sort="(.+)"''', html)
     price = re.findall(r'''class="price" data-usd="(.+)" ''', html)
     datas = {}
