@@ -9,8 +9,8 @@ def get_html(url):
 
 
 def data_of_data(html):
-    names = re.findall(r'''class="no-wrap currency-name" data-sort="(.+)"''', html)
-    price = re.findall(r'''class="price" data-usd="(.+)" ''', html)
+    names = re.findall('class="no-wrap currency-name" data-sort="(.+)"', html)
+    price = re.findall('class="price" data-usd="(.+)" ', html)
     datas = {}
     for j in range(len(names)):
         datas[names[j]] = str(price[j])
